@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        .body {
+            background-color: #000;
+            background-image: url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1517&q=80);
+        }
+    </style>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <h1>Contact & Location</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, maiores nesciunt. Fuga provident voluptatibus amet, esse, sint sequi consectetur inventore odio fugiat illo molestias magni magnam tempore ea ipsum deserunt.</p>
+    </div>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-easybutton@2.4.0/dist/easy-button.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.4.0/dist/easy-button.css" />
+
+<div id="map" style="width: 600px; height: 450px;"></div>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.easyButton('fa-globe', function () {
+        map.setView([51.505, -0.09], 13);
+    }).addTo(map);
+</script>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
